@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if nums == 1:
         print('{} arguments.'.format(nums - 1))
     elif nums == 2:
-        print('{} arguments:'.format(nums - 1))
+        print('{} argument:'.format(nums - 1))
     else:
         print('{} arguments:'.format(nums - 1))
     for n in range(1, nums):
