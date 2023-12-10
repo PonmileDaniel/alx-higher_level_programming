@@ -7,6 +7,7 @@ def to_sub(list_num):
             to_su += n
     return (max_list - to_su)
 
+
 def roman_to_int(roman_string):
     if not roman_string:
         return (0)
