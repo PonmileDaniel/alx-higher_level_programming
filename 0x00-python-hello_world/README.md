@@ -7,4 +7,4 @@ to specify the interpreter. And for the final use the PRINT to print out the sta
 Task 03
 Method: First thing the shebang (#!/usr/bin/python3) then i created a variable which should be "number" and it is should be equivalent to 98, then you should PRINT it out with f-string and a curly braces with the variable in it and the format specifier which is "d" and the remaining string.
 
-TA
+qa
