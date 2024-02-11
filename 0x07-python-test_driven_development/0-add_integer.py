@@ -6,8 +6,8 @@ def add_integer(a, b=98):
     """Adds two integer
     
     Args:
-        a: This is first number
-        b: 98 by default
+        @a: This is first number
+        @b: 98 by default
     Error:
         TypeError: if a , b is not an integer
     Return:
