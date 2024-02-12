@@ -1,0 +1,30 @@
+
+==============================
+How to Use 3-say_my_name.py
+==============================
+
+This module defines a matrix division function ``say_my_name(first_name, last_name)``.
+
+Usage
+=====
+
+``say_my_name(...)`` print the name
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("daniel", "ndukwe")
+    My name is daniel ndukwe
+
+    >>> say_my_name("daniel")
+    My name is daniel
+
+    >>> say_my_name(5)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> say_my_name("daniel", 50)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
