@@ -3,18 +3,20 @@
 
 
 class Rectangle:
+    """Represent a rectangle"""
+
     number_of_instances = 0
-    """A rectangle"""
 
     def __init__(self, width=0, height=0):
-        """Initalize a new Rectangle.
+        """
+        Initalize a new Rectangle.
         Args:
             width: width of the new rectangle
             height: height of the new rectangle
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -62,6 +64,6 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print the message for every deletion"""
+        """Print the message for every deletion."""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
