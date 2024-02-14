@@ -29,7 +29,9 @@ def solve_n_queens(n):
         return [[' '] * n for _ in range(n)]
 
     def get_solution(board):
-        return [[r, c] for r in range(n) for c in range(n) if board[r][c] == 'Q']
+        return [[r, c] for r in range(n)
+                for c in range(n)
+                if board[r][c] == 'Q']
 
     def recursive_solve(board, row, queens, solutions):
         if queens == n:
