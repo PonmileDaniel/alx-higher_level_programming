@@ -3,13 +3,13 @@
 
 
 def is_same_class(obj, a_class):
-    """Checking if an object is exactly an instance
-    
+    """Civen class.
+
     Args:
-        obj: The object to check
-        a_class: The class to compare against.
+        obj : The object to check.
+        a_class : The class to match the type of obj to.
     Returns:
-        if the object is the same true otherwise false 
+        If obj is exactly an instance of a_class - True.
     """
     if type(obj) == a_class:
         return True
