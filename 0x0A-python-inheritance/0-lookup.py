@@ -3,5 +3,9 @@
 
 
 def lookup(obj):
-    """Return list of object available"""
+    """Return list of object availables.
+    Args: object to lookup attribute and method
+    Returns:
+    list of available attributes and method
+    """
     return(dir(obj))
