@@ -1,21 +1,20 @@
-if __name__ == "__main__":
-    magic = Magic()
-    magic.init_dic()
-    nlines = 0
+#!/usr/bin/python3
+"""Defines a text file insertion function."""
 
-    try:
-        for line in sys.stdin:
-            if nlines % 10 == 0 and nlines is not 0:
-                magic.print_info()
 
-            try:
-                list_line = [x for x in line.split(" ") if x.strip()]
-                magic.add_status_code(list_line[-2])
-                magic.size += int(list_line[-1].strip("\n"))
-            except:
-                pass
-            nlines += 1
-    except KeyboardInterrupt:
-        magic.print_info()
-        raise
-    magic.print_info()
+def append_after(filename="", search_string="", new_string=""):
+    """Insert text after each line containing a given string in a file.
+
+    Args:
+        filename (str): The name of the file.
+        search_string (str): The string to search for within the file.
+        new_string (str): The string to insert.
+    """
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
+            if search_string in line:
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
