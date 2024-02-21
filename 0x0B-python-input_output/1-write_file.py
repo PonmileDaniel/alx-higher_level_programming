@@ -8,4 +8,4 @@ def write_file(filename="", text=""):
     with open(filename, 'r', encoding="utf-8") as f:
         for line in f:
             n += 1
-    return f.write(n)
+    return n
