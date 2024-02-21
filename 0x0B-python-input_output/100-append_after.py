@@ -1,39 +1,3 @@
-#!/usr/bin/python3
-"""Module to print status code """
-import sys
-
-
-class Magic:
-    """ Class to generate instance with dict and size"""
-    def __init__(self):
-        """Method"""
-        self.dic = {}
-        self.size = 0
-
-    def init_dic(self):
-        """Dict"""
-        self.dic['200'] = 0
-        self.dic['301'] = 0
-        self.dic['400'] = 0
-        self.dic['401'] = 0
-        self.dic['403'] = 0
-        self.dic['404'] = 0
-        self.dic['405'] = 0
-        self.dic['500'] = 0
-
-    def add_status_code(self, status):
-        """Add repeated """
-        if status in self.dic:
-            self.dic[status] += 1
-            
-    def print_info(self, sig=0, frame=0):
-        """print status"""
-        print("File size: {:d}".format(self.size))
-        for key in sorted(self.dic.keys()):
-            if self.dic[key] != 0:
-                print("{}: {:d}".format(key, self.dic[key]))
-
-
 if __name__ == "__main__":
     magic = Magic()
     magic.init_dic()
@@ -41,7 +5,7 @@ if __name__ == "__main__":
 
     try:
         for line in sys.stdin:
-            if nlines % 10 == 0 and nlines != 0:
+            if nlines % 10 == 0 and nlines is not 0:
                 magic.print_info()
 
             try:
