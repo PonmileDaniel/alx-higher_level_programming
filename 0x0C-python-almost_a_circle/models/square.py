@@ -19,6 +19,8 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def to_dictionary(self):
+        return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}
     def __str__(self):
         """Return the string rep of the square"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
