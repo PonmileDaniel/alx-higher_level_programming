@@ -51,7 +51,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.validate_integer("y", value)
+        #self.validate_integer("y", value)
         self.__y = value
 
     def area(self):
