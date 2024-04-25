@@ -79,3 +79,8 @@ class Rectangle(Base):
         d = '\n' * self.y + \
             (' ' * self.x + "#" * self.width + '\n') * self.height
         print(d, end='')
+
+    def __str__(self):
+        '''Return string about the rectangle'''
+        return f"[Rectangle] ({(self.id)}) {self.x}/{self.y} - " \
+            f"{self.width}/{self.height}"
