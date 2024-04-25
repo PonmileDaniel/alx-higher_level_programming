@@ -25,6 +25,13 @@ class Base:
             return dumps(list_dictionaries)
 
     @classmethod
+    def from_json_string(json_string):
+        '''UNjson a dictionary'''
+        if json_string is None or not json_string:
+            return []
+        return loads(json_string)
+
+    @classmethod
     def save_to_file(cls, list_objs):
         '''save json object to file'''
         if list_objs is not None:
