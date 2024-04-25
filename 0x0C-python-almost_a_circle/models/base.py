@@ -24,7 +24,7 @@ class Base:
         else:
             return dumps(list_dictionaries)
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         '''UNjson a dictionary'''
         if json_string is None or not json_string:
