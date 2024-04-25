@@ -85,30 +85,22 @@ class Rectangle(Base):
         return f"[Rectangle] ({(self.id)}) {self.x}/{self.y} - " \
             f"{self.width}/{self.height}"
 
-    # def update(self, *args):
-    #     '''Update instance of Attribute'''
-    #     if len(args) >= 1:
-    #         self.id = args[0]
-    #     if len(args) >= 2:
-    #         self.width = args[1]
-    #     if len(args) >= 3:
-    #         self.height = args[2]
-    #     if len(args) >= 4:
-    #         self.x = args[3]
-    #     if len(args) >= 5:
-    #         self.y = args[4]
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Update instance of Attribute'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
 
     def update(self, *args, **kwargs):
-        '''Update instance of Attribute'''
+        '''Update instance attribute'''
         if args:
-            self.id = args[0] if len(args) >= 1 else self.id
-            self.width = args[1] if len(args) >= 2 else self.width
-            self.height = args[2] if len(args) >= 3 else self.height
-            self.x = args[3] if len(args) >= 4 else self.x
-            self.y = args[4] if len(args) >= 5 else self.y
-        else:
-            self.id = kwargs.get('id', self.id)
-            self.width = kwargs.get('width', self.width)
-            self.height = kwargs.get('height', self.width)
-            self.x = kwargs.get('x', self.x)
-            self.y = kwargs.get('y', self.y)
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
