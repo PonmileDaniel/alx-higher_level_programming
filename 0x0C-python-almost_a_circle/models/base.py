@@ -52,7 +52,7 @@ class Base:
             new = None
         new.update(**dictionary)
         return new
-    
+
     @classmethod
     def load_from_file(cls):
         '''Load string'''
