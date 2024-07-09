@@ -5,6 +5,8 @@ import sys
 
 
 if __name__ == "__main__":
-    r = sys.argv[1]
-    response = requests.get(r)
-print(response.headers.get('X-Request-Id'))
+    try:
+        r = requests.get(sys.argv[1])
+        print(r.headers['X-Request-Id'])
+    except requests.RequestException as e:
+        print(f"Request failed: {e}", file=sys.stderr)
