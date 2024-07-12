@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""
-Lists all states with a name starting with N
-"""
+"""a name starting with N"""
 import sys
 import MySQLdb
+
 
 if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
