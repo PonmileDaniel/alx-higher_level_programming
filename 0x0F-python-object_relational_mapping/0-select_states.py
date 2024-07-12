@@ -13,3 +13,6 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
     states = cur.fetchall()
+    
+    for stat in states:
+        print(stat)
